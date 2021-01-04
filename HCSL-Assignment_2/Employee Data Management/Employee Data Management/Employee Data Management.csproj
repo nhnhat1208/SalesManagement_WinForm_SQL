@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EC666EB9-3B00-482A-A836-1914CFE7A318}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Employee_Data_Management</RootNamespace>
+    <AssemblyName>Employee Data Management</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="linq2db, Version=3.2.2.0, Culture=neutral, PublicKeyToken=e41013125f9e410a, processorArchitecture=MSIL">
+      <HintPath>..\packages\linq2db.3.2.2\lib\net46\linq2db.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CustomerDataManagement\KH-HD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerDataManagement\KH-HD.designer.cs">
+      <DependentUpon>KH-HD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerDataManagement\QLKH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerDataManagement\QLKH.designer.cs">
+      <DependentUpon>QLKH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerDataManagement\Thông-Tin-KH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerDataManagement\Thông-Tin-KH.designer.cs">
+      <DependentUpon>Thông-Tin-KH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeDataManagement\EmployeeDAL.cs" />
+    <Compile Include="EmployeeDataManagement\EmployeeListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeDataManagement\EmployeeListForm.Designer.cs">
+      <DependentUpon>EmployeeListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeDataManagement\EmployeeDetailForrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeDataManagement\EmployeeDetailForrm.Designer.cs">
+      <DependentUpon>EmployeeDetailForrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeDataManagement\InsertEmployeeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeDataManagement\InsertEmployeeForm.Designer.cs">
+      <DependentUpon>InsertEmployeeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomeMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomeMenu.Designer.cs">
+      <DependentUpon>HomeMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductDataManagement\SPFunctions.cs" />
+    <Compile Include="ProductDataManagement\SP_HD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductDataManagement\SP_HD.designer.cs">
+      <DependentUpon>SP_HD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductDataManagement\SP_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductDataManagement\SP_Main.designer.cs">
+      <DependentUpon>SP_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductDataManagement\SP_Manipulate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductDataManagement\SP_Manipulate.designer.cs">
+      <DependentUpon>SP_Manipulate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CustomerDataManagement\QLKH.resx">
+      <DependentUpon>QLKH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeDataManagement\EmployeeDetailForrm.resx">
+      <DependentUpon>EmployeeDetailForrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeDataManagement\EmployeeListForm.resx">
+      <DependentUpon>EmployeeListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeDataManagement\InsertEmployeeForm.resx">
+      <DependentUpon>InsertEmployeeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomeMenu.resx">
+      <DependentUpon>HomeMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductDataManagement\SP_HD.resx">
+      <DependentUpon>SP_HD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductDataManagement\SP_Main.resx">
+      <DependentUpon>SP_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductDataManagement\SP_Manipulate.resx">
+      <DependentUpon>SP_Manipulate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
